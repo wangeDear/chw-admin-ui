@@ -2,7 +2,8 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router/router";
 
-import ElementPlus from 'element-plus'  //引入element-plus库
+// element plus完整引入
+// import ElementPlus from 'element-plus'  //引入element-plus库
 import 'element-plus/dist/index.css'  //引入element-plus样式
 
 // import "~/styles/element/index.scss"
@@ -20,7 +21,7 @@ import "element-plus/theme-chalk/src/message.scss"
 
 const app = createApp(App);
 
-app.use(ElementPlus);
+// app.use(ElementPlus);
 
 app.use(router);
 

@@ -65,7 +65,10 @@ export default defineComponent({
                 company.value = response.data.data
                 dialogVisible.value = true
             }).catch(function(err){
-                console.info(err)
+                ElMessage({
+                    message: "推送失败，err:" + err,
+                    type: "success"
+                })
             })
         };
 

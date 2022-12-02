@@ -2,6 +2,8 @@ import {createRouter, createWebHashHistory} from "vue-router";
 import login from "~/views/login/login.vue";
 import home from "~/views/home.vue";
 import tms from "~/views/eve/tms/emailSendTest.vue";
+import tmsTable from "~/views/eve/tms/tmsTable.vue";
+import liConfigRole from "~/views/eve/li/configRole.vue";
 
 // 1. 定义路由组件.
 // 也可以从其他文件导入
@@ -16,6 +18,9 @@ const routes = [
   { path: '/login', component: login },
 
   {path: '/tms', component: tms},
+  {path: '/tmsTable', component: tmsTable},
+
+  {path: '/liConfigRole', component: liConfigRole},
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置
