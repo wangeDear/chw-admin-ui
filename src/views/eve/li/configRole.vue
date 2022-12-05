@@ -71,7 +71,7 @@ import {defineComponent, reactive, ref, toRefs} from 'vue'
 import {ElMessage, ElMessageBox, ElLoading} from 'element-plus'
 import router from '~/router/router'
 import {SearchFormData} from '~/types/li/index'
-import {addUser, deleteUser, getTreeData, getUser, listUsers, queryFcode} from "~/request/li";
+import {addUser, deleteUser, getTreeData, getUser, listUsers, queryFcode} from "~/api/li";
 
 export default defineComponent({
   setup() {

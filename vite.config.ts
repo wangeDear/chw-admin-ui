@@ -35,7 +35,6 @@ export default defineConfig({
   plugins: [
     vue(),
     ElementPlus({
-      importStyle: 'sass',
       useSource: true
     }),
     AutoImport({

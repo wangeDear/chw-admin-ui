@@ -2,9 +2,7 @@
 
   <div class="common-layout">
     <el-container class="main-container">
-      <el-header>登录系统</el-header>
       <el-main>
-
         <el-row>
           <el-col :span="8">
             <div class="grid-content ep-bg-purple" />
@@ -49,7 +47,7 @@ export default defineComponent({
     })
 
     const login = () => {
-      router.push('/')
+      router.push('/admin')
     }
 
     return {
@@ -63,7 +61,7 @@ export default defineComponent({
   
 <style>
 .main-container {
-  padding: 80px 20px 10px 10px;
+  padding: 20px 20px 10px 10px;
 }
 
 .card-header {
