@@ -32,6 +32,15 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    proxy: {
+      "/solon-api": {
+        target: "http://localhost:8080",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/solon-api/, ""),
+      },
+    },
+  },
   plugins: [
     vue(),
     ElementPlus({
@@ -73,4 +82,9 @@ export default defineConfig({
   //   outDir: "D:\\workspace\\eve-erupt-server\\src\\main\\resources\\public\\chw-admin",
   //   emptyOutDir: true
   // }
+
+  build: {
+    outDir: "D:\\workspace\\solon-examples\\3.Solon-Web\\demo3011-web\\src\\main\\resources\\WEB-INF\\static\\chw-admin",
+    emptyOutDir: true
+  }
 })

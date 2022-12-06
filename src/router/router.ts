@@ -17,21 +17,42 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("~/views/home.vue"),
         children: [
             {
+                path: 'Dashboard',
+                meta: {
+                    title: "Dashboard",
+                    isShow: true
+                },
+                components: {
+                    default: () => import("~/views/admin/dashboard.vue.vue"),
+                    nav: () => import("~/layouts/navLayout.vue")
+                },
+
+            },
+            {
+                path: 'host',
+                meta: {
+                    title: "主机管理",
+                    isShow: true
+                },
+                components: {
+                    default: () => import("~/views/admin/hostView.vue"),
+                    nav: () => import("~/layouts/navLayout.vue")
+                },
+
+            },
+            {
                 path: 'goods',
+                meta: {
+                    title: "货品列表",
+                    isShow: true
+                },
                 components: {
                     default: () => import("~/views/admin/goods.vue"),
                     nav: () => import("~/layouts/navLayout.vue")
                 },
 
             },
-            {
-                path: 'products',
-                components: {
-                    default: () => import("~/views/admin/products.vue"),
-                    nav: () => import("~/layouts/navLayout.vue")
-                },
 
-            },
         ],
     },
 
