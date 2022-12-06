@@ -1,5 +1,5 @@
 import axios from "axios";
-import {QueryFormTypes} from "~/types/admin/hostTypes";
+import {QueryForm} from "~/types/admin/hostTypes";
 
 const service = axios.create({
     baseURL: "/solon-api",
@@ -17,7 +17,7 @@ service.interceptors.response.use(resp => {
     return resp.data
 })
 
-export function listHost(data: QueryFormTypes){
+export function listHost(data: QueryForm){
     return service({
         url: "/host/list",
         method: "GET",

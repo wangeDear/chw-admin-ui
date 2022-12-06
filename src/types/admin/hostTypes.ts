@@ -9,18 +9,19 @@ interface QueryFormTypes extends HostMetaTypes{
     page: Page,
 }
 
-export class QueryForm
+export class QueryForm implements QueryFormTypes {
+    hostName: string = ""
+    ip: string = ""
+    page: Page = new Page()
+
+}
 
 interface TableDataTypes extends HostMetaTypes{
     password: string
 }
 
 export class InitHostData {
-    queryFormData: QueryFormTypes = {
-        hostName: "",
-        ip: "",
-        page: new Page()
-    }
+    queryFormData: QueryForm = new QueryForm()
 
     list: TableDataTypes[] = []
 }

@@ -1,10 +1,10 @@
 <template>
   <el-form :inline="true" :model="queryFormData" class="demo-form-inline">
     <el-form-item label="主机名称">
-      <el-input v-model="queryFormData.hostName" placeholder="请输入查询主机名称" />
+      <el-input v-model="queryFormData.hostName.value" placeholder="请输入查询主机名称" />
     </el-form-item>
     <el-form-item label="IP">
-      <el-input v-model="queryFormData.ip" placeholder="请输入查询IP">
+      <el-input v-model="queryFormData.ip.value" placeholder="请输入查询IP">
       </el-input>
     </el-form-item>
     <el-form-item>
@@ -28,10 +28,9 @@ import {InitHostData} from "~/types/admin/hostTypes";
 const data = reactive(new InitHostData())
 const queryFormData = {...toRefs(data.queryFormData)}
 
-
 let updateListData = ()=>{
-  listHost(data.queryFormData).then(resp => {
-    data.list = resp.data
+  listHost(data.queryFormData).then((resp: any) => {
+    data.list = resp
   })
 }
 
